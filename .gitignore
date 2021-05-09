@@ -24,8 +24,7 @@ hs_err_pid*
 
 # Unser Zeugs
 persistence.xml
-WebProject/nbproject/private/private.xml
+WebProject/nbproject/*
 WebProject/build/web/WEB-INF/classes/META-INF/persistence.xml
-WebProject/nbproject/project.xml
-WebProject/nbproject/project.properties
-WebProject/nbproject/private/private.xml
+WebProject/nbproject/*
+

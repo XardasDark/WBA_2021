@@ -15,7 +15,7 @@
       <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform"/>
       <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/postgres"/>
       <property name="hibernate.connection.username" value="postgres"/>
-      <property name="hibernate.connection.password" value="Agneovo1"/>
+      <property name="hibernate.connection.password" value="acerasus"/>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>
     </properties>
   </persistence-unit>

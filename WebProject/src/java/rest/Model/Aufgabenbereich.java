@@ -10,17 +10,17 @@ import java.util.Collection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author TimoK
  */
 @Entity
-@Table(name = "Projekt")
-    @NamedQuery(name="Projekt.findByTitel",query="SELECT k FROM Projekt k WHERE k.titel= :titel")
-public class Projekt implements Serializable {
+@Table(name="Aufgabenbereich")
+@NamedQuery(name="Aufgabenbereich.findByTitel",query="SELECT k FROM Aufgabenbereich k WHERE k.titel= :titel")
+public class Aufgabenbereich implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -31,13 +31,17 @@ public class Projekt implements Serializable {
     private String titel;
     @Column(name = "kurzbeschreibung")
     private String kurzbeschreibung;
-    @Column(name = "projektlogo")
-    private String projektlogo;
-    @Column(name = "projektstart")
-    private String projektstart;
-   
-    @OneToMany(mappedBy="projekt")
-    private Collection<Aufgabenbereich> aufgabenbereich;
+    
+    @ManyToOne
+    @JoinColumn(name="projekt_id",nullable=false)
+    private Projekt projekt;
+    
+    @OneToMany(mappedBy="aufgabenbereich")
+    private Collection<Artefakt> artefakt;
+
+    public Long getId() {
+        return id;
+    }
 
     public String getTitel() {
         return titel;
@@ -47,21 +51,14 @@ public class Projekt implements Serializable {
         return kurzbeschreibung;
     }
 
-    public String getProjektlogo() {
-        return projektlogo;
+    public Projekt getProjekt() {
+        return projekt;
     }
 
-    public String getProjektstart() {
-        return projektstart;
+    public Collection<Artefakt> getArtefakt() {
+        return artefakt;
     }
-
-    public Collection<Aufgabenbereich> getAufgabenbereich() {
-        return aufgabenbereich;
-    }
-
-    public Long getId() {
-        return id;
-    }
+    
 
     public void setId(Long id) {
         this.id = id;
@@ -77,10 +74,10 @@ public class Projekt implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Projekt)) {
+        if (!(object instanceof Aufgabenbereich)) {
             return false;
         }
-        Projekt other = (Projekt) object;
+        Aufgabenbereich other = (Aufgabenbereich) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -89,7 +86,7 @@ public class Projekt implements Serializable {
 
     @Override
     public String toString() {
-        return "rest.Model.Projekt[ id=" + id + " ]";
+        return "rest.Model.Aufgabenbereich[ id=" + id + " ]";
     }
     
 }

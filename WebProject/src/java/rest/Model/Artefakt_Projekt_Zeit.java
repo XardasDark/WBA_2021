@@ -6,62 +6,47 @@
 package rest.Model;
 
 import java.io.Serializable;
-import java.util.Collection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author TimoK
  */
 @Entity
-@Table(name = "Projekt")
-    @NamedQuery(name="Projekt.findByTitel",query="SELECT k FROM Projekt k WHERE k.titel= :titel")
-public class Projekt implements Serializable {
+@Table(name="Artefakt_Projekt_Zeit")
+@NamedQuery(name="Artefakt_Projekt_Zeit.findById",query="SELECT k FROM Artefakt_Projekt_Zeit k WHERE k.id= :id")
+public class Artefakt_Projekt_Zeit implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
-    @Column(name = "titel")
-    private String titel;
-    @Column(name = "kurzbeschreibung")
-    private String kurzbeschreibung;
-    @Column(name = "projektlogo")
-    private String projektlogo;
-    @Column(name = "projektstart")
-    private String projektstart;
-   
-    @OneToMany(mappedBy="projekt")
-    private Collection<Aufgabenbereich> aufgabenbereich;
-
-    public String getTitel() {
-        return titel;
-    }
-
-    public String getKurzbeschreibung() {
-        return kurzbeschreibung;
-    }
-
-    public String getProjektlogo() {
-        return projektlogo;
-    }
-
-    public String getProjektstart() {
-        return projektstart;
-    }
-
-    public Collection<Aufgabenbereich> getAufgabenbereich() {
-        return aufgabenbereich;
-    }
+    @Column(name="arbeitszeit")
+    private String arbeitszeit;
+    
+    
+    @ManyToOne
+    @JoinColumn(name="artefakt_id",nullable=false)
+    private Artefakt artefakt;
+    
 
     public Long getId() {
         return id;
     }
+
+    public String getArbeitszeit() {
+        return arbeitszeit;
+    }
+
+    public Artefakt getArtefakt() {
+        return artefakt;
+    }
+    
 
     public void setId(Long id) {
         this.id = id;
@@ -77,10 +62,10 @@ public class Projekt implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Projekt)) {
+        if (!(object instanceof Artefakt_Projekt_Zeit)) {
             return false;
         }
-        Projekt other = (Projekt) object;
+        Artefakt_Projekt_Zeit other = (Artefakt_Projekt_Zeit) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -89,7 +74,7 @@ public class Projekt implements Serializable {
 
     @Override
     public String toString() {
-        return "rest.Model.Projekt[ id=" + id + " ]";
+        return "rest.Model.Artefakt_Projekt_Time[ id=" + id + " ]";
     }
     
 }

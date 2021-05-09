@@ -4,6 +4,9 @@
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <jta-data-source>jdbc/postgrespool</jta-data-source>
     <class>rest.Model.Projekt</class>
+    <class>rest.Model.Artefakt</class>
+    <class>rest.Model.Artefakt_Projekt_Zeit</class>
+    <class>rest.Model.Aufgabenbereich</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <shared-cache-mode>NONE</shared-cache-mode>
     <properties>
@@ -15,8 +18,7 @@
       <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform"/>
       <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/postgres"/>
       <property name="hibernate.connection.username" value="postgres"/>
-      <property name="hibernate.connection.password" value="acerasus"/>
-      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <property name="hibernate.connection.password" value="Agneovo1"/>
     </properties>
   </persistence-unit>
 </persistence>

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package rest;
-
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Resource;
@@ -13,7 +13,10 @@ import javax.naming.NamingException;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.transaction.UserTransaction;
+import rest.Model.Projekt;
+
 
 /**
  *
@@ -32,6 +35,13 @@ public class DatenbankApi {
         } catch (NamingException ex) {
             Logger.getLogger(DatenbankApi.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    public Projekt test() {
+        Query query= this.em.createNamedQuery("Projekt.findByTitel", Projekt.class);
+        query.setParameter("titel", "it");
+        Projekt k = (Projekt) query.getSingleResult();
+        return k;
     }
    
 }

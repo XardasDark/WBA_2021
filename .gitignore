@@ -28,3 +28,5 @@ WebProject/nbproject/*
 WebProject/build/web/WEB-INF/classes/META-INF/persistence.xml
 WebProject/nbproject/*
 
+/WebProject/build/
+/WebProject/dist/

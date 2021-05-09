@@ -10,7 +10,7 @@ import javax.ws.rs.core.Application;
 
 /**
  *
- * @author TimoK
+ * @author Dennis
  */
 @javax.ws.rs.ApplicationPath("webresources")
 public class ApplicationConfig extends Application {
@@ -30,6 +30,9 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(rest.GenericResource.class);
+        resources.add(rest.Service.ArtefaktService.class);
+        resources.add(rest.Service.AufgabenbereichService.class);
+        resources.add(rest.Service.ProjektService.class);
     }
     
 }

@@ -24,3 +24,4 @@ hs_err_pid*
 
 # Unser Zeugs
 persistence.xml
+WebProject/nbproject/private/private.xml

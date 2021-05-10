@@ -1,0 +1,17 @@
+Frage: HTML-Tabellen
+Erreichte Punkte: 0
+Manuelle Rückmeldung:
+<table>-Tag fehlt
+
+
+Projektportal: Implementierung der HTML Dokumente gab 37 von 40 Punkte
+
+Frage: Projektportal: Implementierung der HTML Dokumente
+Erreichte Punkte: 37
+Manuelle Rückmeldung:
+Projektübersicht:
+- Verwenden Sie bitte Tabellen nicht zur Strukturierung von Inhalten, nehmen Sie hier die Suchmaschinenfreundlicheren <article>, <section> usw. (hat man nur früher so gemacht)
+Projektseite:
+- Auch hier besser <article> für das Gesamtprojekt und dann die semantischen Tags einsetzen
+Neues Pojekt Anlegen-Seite:
+- Verwenden Sie wo möglich die spezialisierten Tagtypen (hier date) text ist für ältere Browser sowieso der Fallback

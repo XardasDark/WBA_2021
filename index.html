@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="application-name" content="ProjectPI">
+    <meta name="description" content="Upload your projects here">
+    <meta name="keywords" content="Raspberry, Project, Studi">
+    <meta name="author" content="Dennis Petana, Timo">
+    <title>Start - ProjectPI</title>
+</head>
+
+<body>
+    <header>
+        <picture>
+            <source media="(min-width: 1920px)" srcset="resources/images/header1920x200.png">
+            <source media="(min-width: 1280px)" srcset="resources/images/header1280x133.png">
+            <source media="(min-width: 640px)" srcset="resources/images/header640x67.png">
+            <img src="resources/images/header320x34.png" alt="Header" style="width:auto;">
+        </picture>
+    </header>
+    <ul>
+        <nav>
+            <a href="#"><img src="resources/images/startseite.svg" /></a> |
+            <a href="project_overview.html">Project Overview</a> |
+            <a href="add_project.html">Add New Project</a>
+        </nav>
+    </ul>
+
+    <section>
+        <p>
+            <h1>Welcome at ProjectPI!</h1>
+            <h5>You will find here very interesting Raspberry PI projects also you can upload your own. Watch this short
+                explanation video:</h5>
+            <video width="320" height="200" controls>
+                <source src="resources/videos/start.mp4" type="video/mp4">
+                Your browser does not support the videos!
+            </video>
+        </p>
+    </section>
+
+    <section>
+        <p>
+            <h3>Recent Projects:</h3>
+            <b><li><a href="project_1.html">Enter the Matrix</a></li></b>
+            <b><li><a href="project_2.html">Build your own entertainment system</a></li></b>
+        </p>
+    </section>
+
+    <section>
+        <hr>
+        <form action="#" method="post">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            <p>
+                <a href="register.html">New Here?</a> | Forgot <a href="#">password?</a>
+            </p>
+        </form>
+    </section>
+
+
+    <footer>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <h6>About</h6>
+                        <p>ProjectPI is an Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+                            eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                            sanctus est </p>
+
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><a href="about_us.html">About Us</a></li>
+                            <li><a href="contact_us.html">Contact Us</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="disclaimer.html">Disclaimer</a></li>
+                            <p>
+                                <li><a href="#"><i>Back To Top</i></a></li>
+                            </p>
+                        </ul>
+                        <p>Copyright &copy; 2021 All Rights Reserved by
+                            <a href="#">ProjectPI</a>.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </footer>
+</body>

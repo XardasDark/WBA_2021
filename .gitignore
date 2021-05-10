@@ -26,7 +26,8 @@ hs_err_pid*
 persistence.xml
 WebProject/nbproject/*
 WebProject/build/web/WEB-INF/classes/META-INF/persistence.xml
-WebProject/nbproject/*
 
 /WebProject/build/
 /WebProject/dist/
+WebProject/nbproject/private/private.xml
+WebProject/target/*

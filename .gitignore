@@ -31,3 +31,5 @@ WebProject/build/web/WEB-INF/classes/META-INF/persistence.xml
 /WebProject/dist/
 WebProject/nbproject/private/private.xml
 WebProject/target/*
+
+workspace.code-workspace

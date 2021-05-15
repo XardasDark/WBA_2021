@@ -1,9 +1,12 @@
+<!DOCTYPE html>
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="application-name" content="ProjectPI">
     <meta name="description" content="Upload your projects here">
     <meta name="keywords" content="Raspberry, Project, Studi">
-    <meta name="author" content="Dennis Petana">
+    <meta name="author" content="Dennis Petana, Timo Kohlmeier">
     <title>Register - ProjectPI</title>
 </head>
 
@@ -11,7 +14,7 @@
     <header>
         <picture>
             <source media="(min-width: 1920px)" srcset="resources/images/header1920x200.png">
-            <source media="(min-width: 1280px)" srcset="resources/images/header640x67.png">
+            <source media="(min-width: 1280px)" srcset="resources/images/header1280x133.png">
             <source media="(min-width: 640px)" srcset="resources/images/header640x67.png">
             <img src="resources/images/header320x34.png" alt="Header" style="width:auto;">
         </picture>
@@ -41,7 +44,7 @@
 
     <section>
         <hr>
-        <form action="#" method="post">
+        <form action="http://localhost:8080/WebProject" method="post">
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
 
@@ -58,41 +61,32 @@
         </form>
     </section>
 
-
     <footer>
         <hr>
-        <table>
-            <thead>
-                <tr>
-                    <th>
-                        <h6>About</h6>
-                        <p>ProjectPI is an Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                            eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                            sanctus est </p>
+        <center>
+            <!-- Für diese Aufgabe nutzen wir nur center um die Seite ein wenig ansehnlicher zu machen. Uns ist bewusst das der Tag veraltet ist -->
+            <h6>About</h6>
+            <p><b>ProjectPI is an Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                    veroeos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                    takimata sanctus est </b></p>
+        </center>
+        <nav>
+            <ul>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+                <p>
+                    <li><a href="#"><i>Back To Top</i></a></li>
+                </p>
+            </ul>
+        </nav>
+        <p>Copyright &copy; 2021 All Rights Reserved by
+            <a href="#">ProjectPI</a>.
+        </p>
 
-                    </th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>
-                        <ul>
-                            <li><a href="about_us.html">About Us</a></li>
-                            <li><a href="contact_us.html">Contact Us</a></li>
-                            <li><a href="privacy.html">Privacy Policy</a></li>
-                            <li><a href="disclaimer.html">Disclaimer</a></li>
-                            <p>
-                                <li><a href="#"><i>Back To Top</i></a></li>
-                            </p>
-                        </ul>
-                        <p>Copyright &copy; 2020 All Rights Reserved by
-                            <a href="#">ProjectPI</a>.
-                        </p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
     </footer>
 </body>
+
+</html>

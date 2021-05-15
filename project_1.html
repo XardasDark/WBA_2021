@@ -1,9 +1,12 @@
+<!DOCTYPE html>
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="application-name" content="ProjectPI">
     <meta name="description" content="Upload your projects here">
     <meta name="keywords" content="Raspberry, Project, Studi">
-    <meta name="author" content="Dennis Petana">
+    <meta name="author" content="Dennis Petana, Timo Kohlmeier">
     <title>Enter the Matrix - ProjectPI</title>
 </head>
 
@@ -11,7 +14,7 @@
     <header>
         <picture>
             <source media="(min-width: 1920px)" srcset="resources/images/header1920x200.png">
-            <source media="(min-width: 1280px)" srcset="resources/images/header640x67.png">
+            <source media="(min-width: 1280px)" srcset="resources/images/header1280x133.png">
             <source media="(min-width: 640px)" srcset="resources/images/header640x67.png">
             <img src="resources/images/header320x34.png" alt="Header" style="width:auto;">
         </picture>
@@ -25,88 +28,76 @@
     </ul>
 
     <section>
-        <li><a href="#L3">Project Duration</a></li>
-        <li><a href="#L1">Project Name</a></li>
-        <li><a href="#L4">Short Description</a></li>
-        <li><a href="#L6">Project Goal</a></li>
-        <li><a href="#L2">Project Manager</a></li>
-        <li><a href="#L5">Long Description</a></li>
-    </section>
+        <form action="http://localhost:8080/WebProject/" method="post">
+            <p>
+            <header>
+                <img src="resources/images/matrix.jpg" width="100px" height="100px" /> <b>Enter the Matrix</b>
+            </header>
+            <article>
+                <p><b>Project Manager:</b> Anon</p>
+                <p><b>Project Timeframe:</b> 10.05.2011 | 15.05.2011</p>
+                <p><b>Project Startet:</b> 10.05.2011</p>
+                <p><b>Expected Duration:</b> 7 days</p>
+                <p><b>Actual Duration:</b> 5 days</p>
+            </article>
 
-    <section>
-        <p>
-            <table>
-                <tr>
-                    <th id="L1">
-                        <img src="resources/images/matrix.jpg" width="100px" height="100px" />
-                    </th>
-                    <td>
-                        Enter the Matrix
-                    </td>
-                </tr>
-                <tr>
-                    <th id="L2">
-                        Project Manager:
-                    </th>
-                    <td>Anon</td>
-                </tr>
-                <tr>
-                    <th id="L3">
-                        Project Duration:
-                    </th>
-                    <td>11.05.2020 - 12.05.2020</td>
-                </tr>
-                <tr>
-                    <th id="L4">
-                        Short Description:
-                    </th>
-                    <td>Quisque lorem mi, lobortis et imperdiet vitae, ultricies in nisl.</td>
-                </tr>
-                <tr>
-                    <th id="L5">
-                        Long Description:
-                    </th>
-                    <td>Quisque lorem mi, lobortis et imperdiet vitae, ultricies in nisl. Maecenas fermentum vel lorem a
-                        aliquet. Integer luctus tortor sed tellus tincidunt efficitur. Maecenas elementum arcu et lectus
-                        lobortis, at fermentum turpis vulputate. Aenean fringilla orci nulla, a maximus neque cursus
-                        blandit. Vivamus tincidunt neque mattis enim vehicula, sed semper nunc interdum. Fusce sodales,
-                        dolor vel tempus lobortis, lacus ante varius diam, quis scelerisque ante ipsum ac ex.</td>
-                </tr>
-                <tr>
-                    <th id="L6">
-                        Project Goal:
-                    </th>
-                    <td>
+            <article>
+                <b>Short Description:</b>
+
+                Quisque lorem mi, lobortis et imperdiet vitae, ultricies in nisl.
+            </article>
+            <article>
+                <b>Long Description:</b>
+
+                Quisque lorem mi, lobortis et imperdiet vitae, ultricies in nisl. Maecenas fermentum vel lorem a
+                aliquet. Integer luctus tortor sed tellus tincidunt efficitur. Maecenas elementum arcu et lectus
+                lobortis, at fermentum turpis vulputate. Aenean fringilla orci nulla, a maximus neque cursus
+                blandit. Vivamus tincidunt neque mattis enim vehicula, sed semper nunc interdum. Fusce sodales,
+                dolor vel tempus lobortis, lacus ante varius diam, quis scelerisque ante ipsum ac ex.
+            </article>
+            <article>
+                <b>Project Tasks:</b>
+                <ol>
+                    <li>
+                        <i>Anforderungsanalyse</i>
                         <ol>
-                        <li>
-                            Take the red pill
-                        </li>
-                        <li>
-                            take the blue pill
-                        </li>
-                    </ol>
-                    </td>
-                </tr>
-            </table>
-        </p>
+                            <li>
+                                Aenean fringilla orci nulla - <input type="number" placeholder="Change Duration"
+                                    required="required" name="Req1"> hours
+                            </li>
+                            <li>
+                                Vivamus tincidunt neque mattis enim vehicula - <input type="number"
+                                    placeholder="Change Duration" required="required" name="Req2"> hours
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <i>Konzeption</i>
+                        <ol>
+                            <li>
+                                Integer luctus tortor sed tellus tincidunt efficitur - <input type="number"
+                                    placeholder="Change Duration" required="required" name="Req3"> hours
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </article>
+            </p>
+            <input type="hidden" name="project_name" value="Enter the Matrix">
+            <input type="submit" value="Submit">
+        </form>
     </section>
-
-    <form action="empty_site.html" method="post">
-        Please rate this Project<br>
-        <textarea id="t1" rows="4" cols="50"></textarea><br>
-        <select id="v1">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select><br>
-        <input type="submit" value="Submit">
-    </form>
 
     <section>
         <hr>
-        <form action="#" method="post">
+        <p>
+            <a href="add_task.html">Add Task</a> | <a href="add_artifact.html">Add Artifact</a>
+        </p>
+    </section>
+
+    <section>
+        <hr>
+        <form action="http://localhost:8080/WebProject" method="post">
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
 
@@ -123,43 +114,32 @@
         </form>
     </section>
 
-
     <footer>
         <hr>
-        <table>
-            <thead>
-                <tr>
-                    <th>
-                        <h6>About</h6>
-                        <p>ProjectPI is an Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                            vero
-                            eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                            takimata
-                            sanctus est </p>
+        <center>
+            <!-- Für diese Aufgabe nutzen wir nur center um die Seite ein wenig ansehnlicher zu machen. Uns ist bewusst das der Tag veraltet ist -->
+            <h6>About</h6>
+            <p><b>ProjectPI is an Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                    veroeos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                    takimata sanctus est </b></p>
+        </center>
+        <nav>
+            <ul>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+                <p>
+                    <li><a href="#"><i>Back To Top</i></a></li>
+                </p>
+            </ul>
+        </nav>
+        <p>Copyright &copy; 2021 All Rights Reserved by
+            <a href="#">ProjectPI</a>.
+        </p>
 
-                    </th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>
-                        <ul>
-                            <li><a href="about_us.html">About Us</a></li>
-                            <li><a href="contact_us.html">Contact Us</a></li>
-                            <li><a href="privacy.html">Privacy Policy</a></li>
-                            <li><a href="disclaimer.html">Disclaimer</a></li>
-                            <p>
-                                <li><a href="#"><i>Back To Top</i></a></li>
-                            </p>
-                        </ul>
-                        <p>Copyright &copy; 2020 All Rights Reserved by
-                            <a href="#">ProjectPI</a>.
-                        </p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
     </footer>
 </body>
+
+</html>
